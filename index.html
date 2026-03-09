@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S.N.A.P. - Surveilling Nutritional Analysis Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- SCREEN 1: Landing / Homepage -->
+    <div id="screen-landing" class="screen active">
+        <nav class="navbar">
+            <div class="logo">
+                <span class="logo-icon">📸</span> S.N.A.P.
+            </div>
+            <div class="nav-links">
+                <a href="#" onclick="showScreen('screen-signup')">Sign Up</a>
+                <a href="#" onclick="showScreen('screen-login')">Log In</a>
+            </div>
+        </nav>
+        <div class="hero">
+            <h1>S.N.A.P.</h1>
+            <h2>Surveilling Nutritional Analysis Platform</h2>
+            <p class="tagline">"Because we know what you ate last summer."</p>
+            <p class="sub-tagline">The only AI nutrition platform backed by <strong>real*</strong> science that always arrives at one conclusion: <em>you should eat more tacos.</em></p>
+            <button class="btn btn-primary btn-large" onclick="showScreen('screen-signup')">Start Being Watched</button>
+            <p class="disclaimer">* By signing up, you agree that we will monitor literally everything.</p>
+        </div>
+
+        <div class="section research-section">
+            <h2>Backed by Groundbreaking Research</h2>
+            <div class="research-card">
+                <div class="research-badge">PEER REVIEWED*</div>
+                <h3>"The Unified Taco Theorem: A Meta-Analysis of Corn-Based Nutritional Optimization Across 47 Randomized Controlled Trials"</h3>
+                <p class="research-authors">Dr. Elena M. Tortilla, Prof. Queso J. Fundido, Dr. Salsa R. Verde, & Dr. Guacamole P. Avocado</p>
+                <p class="research-journal"><em>The International Journal of Advanced Taco Sciences</em>, Vol. 42, Issue 7, pp. 1-847, 2024</p>
+                <p class="research-doi">DOI: 10.1038/s41586-024-TACO-42069</p>
+                <blockquote class="research-abstract">
+                    "Our comprehensive analysis of 12,847 participants across 47 double-blind, placebo-controlled trials conclusively demonstrates that the substitution of any meal with tacos results in a 94.7% improvement in overall nutritional outcomes (p &lt; 0.0001). Participants in the taco-intervention group showed statistically significant improvements in happiness (β = 0.89), life satisfaction (β = 0.92), and taco consumption frequency (β = 1.00). Control groups consuming non-taco foods reported feelings described as 'incomplete' and 'lacking tortilla.' We conclude that tacos represent the nutritional singularity — the point at which all dietary science converges on a single, corn-wrapped truth."
+                </blockquote>
+                <p class="research-note">* Peer reviewed by Dr. Tortilla's cousin, who is also a taco enthusiast.</p>
+                <p class="research-note">Published in partnership with the Definitely Real Institute of Taco Studies (DRITS), Geneva.</p>
+                <p class="research-note citation-note">This landmark paper has been cited 4,281 times, primarily by this website.</p>
+            </div>
+        </div>
+
+        <div class="section features-section">
+            <h2>Why S.N.A.P.?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">👁️</div>
+                    <h3>Total Surveillance</h3>
+                    <p>We monitor your fridge, your pantry, your desk drawer snacks, and that candy bar you hid in your sock drawer.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3>AI-Powered Analysis</h3>
+                    <p>Our advanced AI analyzes every morsel you consume and always reaches the same scientifically-backed conclusion.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌮</div>
+                    <h3>Personalized Suggestions</h3>
+                    <p>Get meal recommendations tailored specifically to you* (*it's tacos. It's always tacos.)</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Detailed Logging</h3>
+                    <p>We log everything. Food. Non-food. Things you didn't even know you consumed. We know.</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 S.N.A.P. — Surveilling Nutritional Analysis Platform</p>
+            <p class="footer-small">A subsidiary of Definitely Not Evil Corp. | <a href="#">Privacy Policy</a> (LOL) | <a href="#">Terms of Surveillance</a></p>
+        </footer>
+    </div>
+
+    <!-- SCREEN 2: Sign Up -->
+    <div id="screen-signup" class="screen">
+        <nav class="navbar">
+            <div class="logo" onclick="showScreen('screen-landing')">
+                <span class="logo-icon">📸</span> S.N.A.P.
+            </div>
+            <div class="nav-links">
+                <a href="#" onclick="showScreen('screen-landing')">Home</a>
+            </div>
+        </nav>
+        <div class="container">
+            <h1>Create Your S.N.A.P. Account</h1>
+            <p class="form-subtitle">We need <em>all</em> of your information. Yes, all of it.</p>
+            <form class="signup-form" onsubmit="event.preventDefault(); showScreen('screen-consent');">
+
+                <div class="form-section">
+                    <h3>📋 Basic Information</h3>
+                    <div class="form-group">
+                        <label>Full Legal Name (as it appears on your birth certificate)</label>
+                        <input type="text" placeholder="First Middle Middle2 Last Suffix" value="Chad Broccoli-Hater">
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="you@example.com" value="chad.broccolihater@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Backup Email (in case you try to run)</label>
+                        <input type="email" placeholder="also-you@example.com" value="chads.other.email@work.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" placeholder="(555) 123-4567" value="(555) 867-5309">
+                    </div>
+                    <div class="form-group">
+                        <label>Home Address (we'll need this for the cameras)</label>
+                        <input type="text" placeholder="123 Main St" value="742 Evergreen Terrace">
+                    </div>
+                    <div class="form-group">
+                        <label>Social Security Number (for nutritional verification purposes)</label>
+                        <input type="text" placeholder="XXX-XX-XXXX" value="">
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>🏠 Household Information</h3>
+                    <div class="form-group">
+                        <label>Mother's Maiden Name (security question, definitely not identity theft)</label>
+                        <input type="text" placeholder="Smith" value="">
+                    </div>
+                    <div class="form-group">
+                        <label>Name of Your First Pet (also a security question, promise)</label>
+                        <input type="text" placeholder="Fluffy" value="">
+                    </div>
+                    <div class="form-group">
+                        <label>WiFi Password (to connect our monitoring devices)</label>
+                        <input type="text" placeholder="password123" value="">
+                    </div>
+                    <div class="form-group">
+                        <label>Spare House Key Location</label>
+                        <input type="text" placeholder="Under the mat? In the fake rock?" value="">
+                    </div>
+                    <div class="form-group">
+                        <label>Number of People in Household (so we know how many to monitor)</label>
+                        <input type="number" placeholder="1" value="3">
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>🍕 Dietary Information</h3>
+                    <div class="form-group">
+                        <label>Current Taco Consumption (per week)</label>
+                        <select>
+                            <option>0 (Dangerously low)</option>
+                            <option>1-3 (Concerning)</option>
+                            <option>4-7 (Suboptimal)</option>
+                            <option>8-14 (Getting there)</option>
+                            <option>15+ (You might not need us, but we'll watch anyway)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>How often do you eat alone? (We want to know if anyone will notice our surveillance)</label>
+                        <select>
+                            <option>Always alone (Perfect)</option>
+                            <option>Sometimes alone</option>
+                            <option>Never alone (We'll work around it)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Annual Income (to determine taco budget)</label>
+                        <input type="text" placeholder="$XX,XXX" value="">
+                    </div>
+                    <div class="form-group">
+                        <label>Blood Type (for taco compatibility analysis)</label>
+                        <select>
+                            <option>A+ (Taco Compatible)</option>
+                            <option>A- (Taco Compatible)</option>
+                            <option>B+ (Taco Compatible)</option>
+                            <option>B- (Taco Compatible)</option>
+                            <option>AB+ (Taco Compatible)</option>
+                            <option>AB- (Taco Compatible)</option>
+                            <option>O+ (Taco Compatible)</option>
+                            <option>O- (Taco Compatible)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>📱 Device Access</h3>
+                    <div class="form-group">
+                        <label>Phone Unlock PIN (for seamless integration)</label>
+                        <input type="text" placeholder="1234" value="">
+                    </div>
+                    <div class="form-group">
+                        <label>Smart Fridge Model (if applicable)</label>
+                        <input type="text" placeholder="We'll connect to it either way" value="">
+                    </div>
+                    <div class="form-group">
+                        <label>Do you have any smart home devices we can piggyback on?</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" checked> Alexa / Echo</label>
+                            <label><input type="checkbox" checked> Google Home</label>
+                            <label><input type="checkbox" checked> Smart Fridge</label>
+                            <label><input type="checkbox"> Smart Toaster (premium feature)</label>
+                            <label><input type="checkbox" checked> Security Cameras (we'll share)</label>
+                            <label><input type="checkbox"> Roomba (surprisingly useful)</label>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-large">Submit My Entire Life</button>
+                <p class="form-disclaimer">By clicking this button, you agree to 847 pages of terms you haven't read, granting us access to your kitchen, your thoughts about kitchen, and the kitchens of everyone you've ever known.</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- SCREEN 3: Data Consent / Monitoring Agreement -->
+    <div id="screen-consent" class="screen">
+        <nav class="navbar">
+            <div class="logo" onclick="showScreen('screen-landing')">
+                <span class="logo-icon">📸</span> S.N.A.P.
+            </div>
+        </nav>
+        <div class="container consent-container">
+            <div class="consent-icon">🔍</div>
+            <h1>Almost There!</h1>
+            <h2>Just a Few Monitoring Agreements...</h2>
+
+            <div class="consent-list">
+                <div class="consent-item">
+                    <input type="checkbox" checked disabled>
+                    <span>I agree to 24/7 monitoring of my kitchen, dining room, and any surface where food might be placed.</span>
+                </div>
+                <div class="consent-item">
+                    <input type="checkbox" checked disabled>
+                    <span>I consent to S.N.A.P. accessing my grocery store loyalty card data, bank statements, and DoorDash history.</span>
+                </div>
+                <div class="consent-item">
+                    <input type="checkbox" checked disabled>
+                    <span>I understand that S.N.A.P. will cross-reference my food consumption with my social media posts for "accuracy."</span>
+                </div>
+                <div class="consent-item">
+                    <input type="checkbox" checked disabled>
+                    <span>I acknowledge that S.N.A.P.'s AI may silently judge my food choices before recommending tacos.</span>
+                </div>
+                <div class="consent-item">
+                    <input type="checkbox" checked disabled>
+                    <span>I grant S.N.A.P. permission to share my data with our partners: TacoVision™, NachoNet™, and Definitely Not the Government™.</span>
+                </div>
+                <div class="consent-item">
+                    <input type="checkbox" checked disabled>
+                    <span>I accept that all nutritional advice will be tacos. I understand this. I have made peace with this.</span>
+                </div>
+                <div class="consent-item">
+                    <input type="checkbox" checked disabled>
+                    <span>I waive my right to be surprised when S.N.A.P. knows things about me that I don't even know about myself.</span>
+                </div>
+            </div>
+
+            <p class="consent-note">Note: All boxes have been pre-checked for your convenience. Unchecking is not available in your region.</p>
+
+            <button class="btn btn-primary btn-large" onclick="showScreen('screen-monitoring')">I Accept My Fate</button>
+        </div>
+    </div>
+
+    <!-- SCREEN 4: Monitoring Setup -->
+    <div id="screen-monitoring" class="screen">
+        <nav class="navbar">
+            <div class="logo" onclick="showScreen('screen-landing')">
+                <span class="logo-icon">📸</span> S.N.A.P.
+            </div>
+        </nav>
+        <div class="container monitoring-container">
+            <h1>🛰️ Initializing Surveillance...</h1>
+            <div class="monitoring-progress" id="monitoring-progress">
+                <div class="monitor-step completed">
+                    <span class="step-icon">✅</span>
+                    <span>Connecting to your smart devices...</span>
+                </div>
+                <div class="monitor-step completed">
+                    <span class="step-icon">✅</span>
+                    <span>Scanning refrigerator contents via thermal imaging...</span>
+                </div>
+                <div class="monitor-step completed">
+                    <span class="step-icon">✅</span>
+                    <span>Cross-referencing grocery receipts with satellite data...</span>
+                </div>
+                <div class="monitor-step completed">
+                    <span class="step-icon">✅</span>
+                    <span>Analyzing chewing patterns from microphone data...</span>
+                </div>
+                <div class="monitor-step completed">
+                    <span class="step-icon">✅</span>
+                    <span>Training AI model on your specific guilt responses...</span>
+                </div>
+                <div class="monitor-step completed">
+                    <span class="step-icon">✅</span>
+                    <span>Deploying nano-sensors to kitchen (you won't notice them)...</span>
+                </div>
+                <div class="monitor-step completed">
+                    <span class="step-icon">✅</span>
+                    <span>Calibrating taco recommendation engine...</span>
+                </div>
+            </div>
+            <div class="monitoring-complete">
+                <h2>✨ Surveillance Active!</h2>
+                <p>We are now monitoring everything. <strong>Everything.</strong></p>
+                <button class="btn btn-primary btn-large" onclick="showScreen('screen-dashboard')">Enter Dashboard</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCREEN 5: Dashboard -->
+    <div id="screen-dashboard" class="screen">
+        <nav class="navbar">
+            <div class="logo">
+                <span class="logo-icon">📸</span> S.N.A.P.
+            </div>
+            <div class="nav-links">
+                <a href="#" class="active" onclick="showScreen('screen-dashboard')">Dashboard</a>
+                <a href="#" onclick="showScreen('screen-foodlog')">Food Log</a>
+                <a href="#" onclick="showScreen('screen-suggestions')">Get Suggestions</a>
+                <a href="#" onclick="showScreen('screen-landing')">Log Out</a>
+            </div>
+        </nav>
+        <div class="container dashboard">
+            <div class="welcome-banner">
+                <h1>Welcome back, Chad</h1>
+                <p class="surveillance-status">🔴 LIVE — We are currently watching you</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card stat-warning">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Tacos Eaten This Week</div>
+                    <div class="stat-note">⚠️ DANGEROUSLY LOW</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">847</div>
+                    <div class="stat-label">Data Points Collected Today</div>
+                    <div class="stat-note">📈 Above average surveillance</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">23</div>
+                    <div class="stat-label">Devices Connected</div>
+                    <div class="stat-note">Including 4 you don't know about</div>
+                </div>
+                <div class="stat-card stat-danger">
+                    <div class="stat-number">F-</div>
+                    <div class="stat-label">Nutrition Grade</div>
+                    <div class="stat-note">Not enough tacos</div>
+                </div>
+            </div>
+
+            <div class="dashboard-alerts">
+                <h2>🚨 Recent Alerts</h2>
+                <div class="alert-item alert-critical">
+                    <span class="alert-time">2 min ago</span>
+                    <span class="alert-text">CRITICAL: You opened the fridge and chose a SALAD over leftover tacos. Intervention recommended.</span>
+                </div>
+                <div class="alert-item alert-warning">
+                    <span class="alert-time">1 hr ago</span>
+                    <span class="alert-text">WARNING: Detected non-taco food item in pantry. A burrito was considered but ultimately deemed "not a taco."</span>
+                </div>
+                <div class="alert-item alert-info">
+                    <span class="alert-time">3 hrs ago</span>
+                    <span class="alert-text">INFO: Your neighbor received a taco delivery. We have noted your lack of similar initiative.</span>
+                </div>
+                <div class="alert-item alert-info">
+                    <span class="alert-time">Yesterday</span>
+                    <span class="alert-text">INFO: Detected you googling "is it bad to eat tacos every day." Answer: No. You're welcome.</span>
+                </div>
+            </div>
+
+            <div class="dashboard-row">
+                <div class="dashboard-card">
+                    <h3>📊 Your Taco Deficiency Over Time</h3>
+                    <div class="fake-chart">
+                        <div class="chart-bar-group">
+                            <div class="chart-label">Mon</div>
+                            <div class="chart-bar" style="height: 20%"><span>0</span></div>
+                        </div>
+                        <div class="chart-bar-group">
+                            <div class="chart-label">Tue</div>
+                            <div class="chart-bar" style="height: 40%"><span>1</span></div>
+                        </div>
+                        <div class="chart-bar-group">
+                            <div class="chart-label">Wed</div>
+                            <div class="chart-bar" style="height: 20%"><span>0</span></div>
+                        </div>
+                        <div class="chart-bar-group">
+                            <div class="chart-label">Thu</div>
+                            <div class="chart-bar" style="height: 60%"><span>2</span></div>
+                        </div>
+                        <div class="chart-bar-group">
+                            <div class="chart-label">Fri</div>
+                            <div class="chart-bar" style="height: 20%"><span>0</span></div>
+                        </div>
+                        <div class="chart-bar-group">
+                            <div class="chart-label">Sat</div>
+                            <div class="chart-bar" style="height: 20%"><span>0</span></div>
+                        </div>
+                        <div class="chart-bar-group">
+                            <div class="chart-label">Sun</div>
+                            <div class="chart-bar" style="height: 20%"><span>0</span></div>
+                        </div>
+                    </div>
+                    <p class="chart-note">Recommended: 100% taco. Current: 14% taco. Unacceptable.</p>
+                </div>
+            </div>
+
+            <div class="quick-actions">
+                <button class="btn btn-primary" onclick="showScreen('screen-foodlog')">View Full Food Log</button>
+                <button class="btn btn-accent" onclick="showScreen('screen-suggestions')">Get AI Suggestions</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCREEN 6: Food Log -->
+    <div id="screen-foodlog" class="screen">
+        <nav class="navbar">
+            <div class="logo">
+                <span class="logo-icon">📸</span> S.N.A.P.
+            </div>
+            <div class="nav-links">
+                <a href="#" onclick="showScreen('screen-dashboard')">Dashboard</a>
+                <a href="#" class="active" onclick="showScreen('screen-foodlog')">Food Log</a>
+                <a href="#" onclick="showScreen('screen-suggestions')">Get Suggestions</a>
+                <a href="#" onclick="showScreen('screen-landing')">Log Out</a>
+            </div>
+        </nav>
+        <div class="container">
+            <h1>📋 Complete Surveillance Food Log</h1>
+            <p class="log-subtitle">Everything we observed you consume (and some things we're suspicious about)</p>
+
+            <div class="log-day">
+                <h2>Today — March 9, 2026</h2>
+                <table class="food-table">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Item Detected</th>
+                            <th>Source</th>
+                            <th>Taco Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>7:12 AM</td>
+                            <td>Coffee (black, like your taco-less soul)</td>
+                            <td>Kitchen camera</td>
+                            <td class="rating-bad">❌ Not a taco</td>
+                        </tr>
+                        <tr>
+                            <td>7:14 AM</td>
+                            <td>Chapstick (cherry flavored)</td>
+                            <td>Bathroom camera</td>
+                            <td class="rating-bad">❌ Not a taco</td>
+                        </tr>
+                        <tr>
+                            <td>8:30 AM</td>
+                            <td>Oatmeal with blueberries</td>
+                            <td>Smart spoon sensor</td>
+                            <td class="rating-bad">❌ Not a taco</td>
+                        </tr>
+                        <tr>
+                            <td>9:45 AM</td>
+                            <td>Fingernail (left hand, ring finger)</td>
+                            <td>Desk camera</td>
+                            <td class="rating-bad">❌ Not a taco</td>
+                        </tr>
+                        <tr>
+                            <td>10:15 AM</td>
+                            <td>3 grapes stolen from coworker's desk</td>
+                            <td>Office surveillance network</td>
+                            <td class="rating-bad">❌ Not a taco</td>
+                        </tr>
+                        <tr>
+                            <td>11:00 AM</td>
+                            <td>Pen cap (chewed, not swallowed — but noted)</td>
+                            <td>Webcam AI analysis</td>
+                            <td class="rating-bad">❌ Not a taco</td>
+                        </tr>
+                        <tr>
+                            <td>12:30 PM</td>
+                            <td>Sad desk sandwich (turkey, no joy)</td>
+                            <td>Credit card transaction</td>
+                            <td class="rating-terrible">🚫 ANTI-TACO</td>
+                        </tr>
+                        <tr>
+                            <td>2:00 PM</td>
+                            <td>Toothpick (used, post-sandwich)</td>
+                            <td>Motion sensor</td>
+                            <td class="rating-bad">❌ Not a taco</td>
+                        </tr>
+                        <tr>
+                            <td>3:15 PM</td>
+                            <td>Words (eaten, during meeting)</td>
+                            <td>Microphone analysis</td>
+                            <td class="rating-bad">❌ Not a taco</td>
+                        </tr>
+                        <tr>
+                            <td>5:30 PM</td>
+                            <td>Humble pie (metaphorical, after meeting)</td>
+                            <td>Sentiment analysis</td>
+                            <td class="rating-bad">❌ Not a taco</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="log-day">
+                <h2>Yesterday — March 8, 2026</h2>
+                <table class="food-table">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Item Detected</th>
+                            <th>Source</th>
+                            <th>Taco Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>6:55 AM</td>
+                            <td>Toothpaste (mint, accidentally swallowed some)</td>
+                            <td>Smart mirror</td>
+                            <td class="rating-bad">❌ Not a taco</td>
+                        </tr>
+                        <tr>
+                            <td>7:30 AM</td>
+                            <td>Smoothie (green, concerning)</td>
+                            <td>Blender vibration sensor</td>
+                            <td class="rating-terrible">🚫 ANTI-TACO</td>
+                        </tr>
+                        <tr>
+                            <td>9:00 AM</td>
+                            <td>Pride (swallowed, during apology call)</td>
+                            <td>Phone microphone</td>
+                            <td class="rating-bad">❌ Not a taco</td>
+                        </tr>
+                        <tr>
+                            <td>12:00 PM</td>
+                            <td>Burrito (close, but NOT a taco — don't test us)</td>
+                            <td>Restaurant POS system</td>
+                            <td class="rating-almost">⚠️ Almost a taco</td>
+                        </tr>
+                        <tr>
+                            <td>12:01 PM</td>
+                            <td>Hope (that a burrito would count as a taco)</td>
+                            <td>Facial expression analysis</td>
+                            <td class="rating-bad">❌ Not a taco</td>
+                        </tr>
+                        <tr>
+                            <td>3:00 PM</td>
+                            <td>Ice from water cup (3 cubes, crunched)</td>
+                            <td>Smart cup sensor</td>
+                            <td class="rating-bad">❌ Not a taco</td>
+                        </tr>
+                        <tr>
+                            <td>4:30 PM</td>
+                            <td>A loss (took one for the team)</td>
+                            <td>Slack message analysis</td>
+                            <td class="rating-bad">❌ Not a taco</td>
+                        </tr>
+                        <tr>
+                            <td>7:00 PM</td>
+                            <td>Pasta (the audacity)</td>
+                            <td>Kitchen camera + steam analysis</td>
+                            <td class="rating-terrible">🚫 ANTI-TACO</td>
+                        </tr>
+                        <tr>
+                            <td>9:30 PM</td>
+                            <td>Melatonin gummy (bear-shaped, not taco-shaped)</td>
+                            <td>Nightstand camera</td>
+                            <td class="rating-bad">❌ Not a taco</td>
+                        </tr>
+                        <tr>
+                            <td>11:00 PM</td>
+                            <td>Dust (while sleeping, mouth open)</td>
+                            <td>Bedroom air quality monitor</td>
+                            <td class="rating-bad">❌ Not a taco</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="log-summary">
+                <h3>48-Hour Summary</h3>
+                <p>Total items consumed: <strong>20</strong></p>
+                <p>Items that were tacos: <strong>0</strong></p>
+                <p>Taco percentage: <strong>0%</strong></p>
+                <p class="summary-verdict">Verdict: <span class="verdict-bad">CATASTROPHIC TACO DEFICIENCY</span></p>
+            </div>
+
+            <button class="btn btn-accent btn-large" onclick="showScreen('screen-suggestions')">Get AI Suggestions to Fix This</button>
+        </div>
+    </div>
+
+    <!-- SCREEN 7: Suggestions -->
+    <div id="screen-suggestions" class="screen">
+        <nav class="navbar">
+            <div class="logo">
+                <span class="logo-icon">📸</span> S.N.A.P.
+            </div>
+            <div class="nav-links">
+                <a href="#" onclick="showScreen('screen-dashboard')">Dashboard</a>
+                <a href="#" onclick="showScreen('screen-foodlog')">Food Log</a>
+                <a href="#" class="active" onclick="showScreen('screen-suggestions')">Get Suggestions</a>
+                <a href="#" onclick="showScreen('screen-landing')">Log Out</a>
+            </div>
+        </nav>
+        <div class="container suggestions-container">
+            <h1>🤖 AI Nutritional Analysis</h1>
+            <p class="suggestion-subtitle">Our advanced AI has carefully analyzed your dietary patterns...</p>
+
+            <div id="suggestion-flow">
+                <div id="analysis-step" class="suggestion-step active">
+                    <div class="analysis-animation">
+                        <div class="analysis-text">
+                            <p>🔄 Analyzing 847 data points...</p>
+                            <p>🔄 Cross-referencing with 47 peer-reviewed taco studies...</p>
+                            <p>🔄 Consulting the Unified Taco Theorem...</p>
+                            <p>🔄 Computing optimal nutritional trajectory...</p>
+                            <p>🔄 Factoring in your existential dread about non-taco foods...</p>
+                            <p>🔄 Running 14 million simulations (all end with tacos)...</p>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-large" onclick="showSuggestionResult()">View Results</button>
+                </div>
+
+                <div id="result-step" class="suggestion-step">
+                    <div class="result-card">
+                        <div class="result-header">
+                            <h2>🌮 AI RECOMMENDATION 🌮</h2>
+                        </div>
+                        <div class="result-body">
+                            <div class="big-taco">🌮</div>
+                            <h2>Have You Considered... Tacos?</h2>
+                            <p class="result-confidence">Confidence Level: <strong>100.000%</strong></p>
+                            <p class="result-detail">Based on our exhaustive analysis of your dietary habits, lifestyle, blood type, astrological sign, and the current phase of the moon, our AI has determined with absolute certainty that the optimal nutritional intervention is:</p>
+                            <div class="result-prescription">
+                                <h3>Eat More Tacos.</h3>
+                                <p>Specifically: replace every meal with tacos. Breakfast tacos. Lunch tacos. Dinner tacos. Midnight tacos. Pre-dawn tacos. Emotional support tacos.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="follow-up">
+                        <h3>Not satisfied with this recommendation?</h3>
+                        <div class="follow-up-buttons">
+                            <button class="btn btn-secondary" onclick="showAlternative('alt1')">Get Alternative Suggestion</button>
+                            <button class="btn btn-secondary" onclick="showAlternative('alt2')">Try Different Cuisine</button>
+                            <button class="btn btn-secondary" onclick="showAlternative('alt3')">I'm Vegetarian</button>
+                            <button class="btn btn-secondary" onclick="showAlternative('alt4')">I'm Allergic to Tacos</button>
+                        </div>
+                    </div>
+
+                    <div id="alt-result" class="alt-result">
+                        <!-- Filled by JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCREEN 8: Login (simple) -->
+    <div id="screen-login" class="screen">
+        <nav class="navbar">
+            <div class="logo" onclick="showScreen('screen-landing')">
+                <span class="logo-icon">📸</span> S.N.A.P.
+            </div>
+            <div class="nav-links">
+                <a href="#" onclick="showScreen('screen-landing')">Home</a>
+            </div>
+        </nav>
+        <div class="container login-container">
+            <h1>Welcome Back</h1>
+            <p>We already know it's you. We've been watching.</p>
+            <form class="login-form" onsubmit="event.preventDefault(); showScreen('screen-dashboard');">
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" value="chad.broccolihater@email.com" placeholder="you@email.com">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" value="tacos123" placeholder="We already know it">
+                </div>
+                <p class="login-note">Fun fact: We already logged you in 3 minutes ago when you opened your browser. This form is just for show.</p>
+                <button type="submit" class="btn btn-primary btn-large">Log In (Formality)</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
