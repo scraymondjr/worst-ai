@@ -1072,3 +1072,34 @@ footer a {
         width: 25px;
     }
 }
+
+/* QR Code Section */
+.qr-section {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: var(--bg-card);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: inline-block;
+}
+
+.qr-label {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+}
+
+.qr-code {
+    width: 180px;
+    height: 180px;
+    border-radius: 8px;
+    background: white;
+    padding: 8px;
+}
+
+.qr-note {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+    font-style: italic;
+}
